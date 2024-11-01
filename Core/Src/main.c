@@ -22,6 +22,7 @@
 #include "adc.h"
 #include "dma.h"
 #include "fdcan.h"
+#include "memorymap.h"
 #include "octospi.h"
 #include "spi.h"
 #include "tim.h"
@@ -73,6 +74,7 @@ void MX_FREERTOS_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -101,11 +103,6 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_TIM3_Init();
-  MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
-  MX_USART3_UART_Init();
-  MX_UART7_Init();
-  MX_USART10_UART_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
   MX_FDCAN3_Init();
@@ -118,13 +115,14 @@ int main(void)
   Robot_Init();
   /* USER CODE END 2 */
 
-  /* Call init function for freertos objects (in freertos.c) */
+  /* Call init function for freertos objects (in cmsis_os2.c) */
   MX_FREERTOS_Init();
 
   /* Start scheduler */
   osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
