@@ -83,6 +83,8 @@ void Error_Handler(void);
 #define DCMI_REST_GPIO_Port GPIOB
 #define LCD_DC_Pin GPIO_PIN_10
 #define LCD_DC_GPIO_Port GPIOD
+#define Remote_Pin GPIO_PIN_2
+#define Remote_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
 

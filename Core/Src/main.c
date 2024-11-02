@@ -99,7 +99,6 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM12_Init();
   MX_SPI1_Init();
-  MX_SPI6_Init();
   MX_SPI2_Init();
   MX_TIM3_Init();
   MX_USART1_UART_Init();
@@ -114,6 +113,7 @@ int main(void)
   MX_TIM2_Init();
   MX_OCTOSPI2_Init();
   MX_TIM6_Init();
+  MX_UART5_Init();
   /* USER CODE BEGIN 2 */
   Robot_Init();
   /* USER CODE END 2 */
